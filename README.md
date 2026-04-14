@@ -179,6 +179,8 @@ Important:
 - Priority 10: ARP flood.
 - Priority 0: table-miss to controller.
 
+Result note: Flow deletion caused failure; restart restored rules and connectivity (see [results/logs/mininet_logs.md](results/logs/mininet_logs.md), [results/logs/dump_flows.md](results/logs/dump_flows.md), and [results/logs/controller_logs.md](results/logs/controller_logs.md)).
+
 ---
 
 ## Test Scenarios
@@ -259,6 +261,19 @@ Flow counters:
 ```bash
 sudo ovs-ofctl -O OpenFlow13 dump-flows s1
 ```
+
+---
+
+## Proof of Execution Artifacts
+Logs are stored in `results/logs/` and screenshots are stored in `results/screenshots/`.
+
+Current screenshots in `results/screenshots/`:
+- `controller_running.png`
+- `mn_pingall_ping.png`
+- `mn_ping_iperf.png`
+- `flow_initial_del.png`
+- `flow_reappear_reg.png`
+- `mn_regression_test.png`
 
 ---
 
